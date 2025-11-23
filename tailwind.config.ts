@@ -47,6 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          blue: "hsl(var(--brand-blue))",
+          "blue-dark": "hsl(var(--brand-blue-dark))",
+          teal: "hsl(var(--brand-teal))",
+        },
+        "card-bg": {
+          peach: "hsl(var(--card-peach))",
+          cyan: "hsl(var(--card-cyan))",
+          "light-blue": "hsl(var(--card-light-blue))",
+        },
+        whatsapp: "hsl(var(--whatsapp))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
