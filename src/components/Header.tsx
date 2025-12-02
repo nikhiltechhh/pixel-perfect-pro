@@ -9,35 +9,39 @@ const Header = () => {
   const navigate = useNavigate();
 
   const navigationItems = [
-     { label: "HOME", href: "/" },
+    { label: "HOME", href: "/" },
     { label: "HEARING AIDS", href: "/hearingaid" },
-    { label: "HEARING HEALTH", href: "/Health" },
+    { label: "HEARING ASSESSMENTS", href: "/Health" },
     { label: "RAPID HEARING TEST", href: "/Appointment" },
     { label: "BOOK APPOINTMENT", href: "/Appointment" },
-    { label: "PRODUCTS", href: "/Products"  },
-    // { label: "FIND STORES", href: "#find-stores" },
-    // { label: "BLOGS", href: "#blogs" },
+    { label: "PRODUCTS", href: "/Products" },
   ];
 
   return (
     <header className="bg-background shadow-sm sticky top-0 z-50">
-      {/* Top Bar */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3 md:py-4">
+
           {/* Mobile Menu + Logo */}
           <div className="flex items-center gap-3">
             <MobileNav />
-            <div className="flex items-center gap-2">
+
+            {/* CLICKABLE LOGO */}
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => navigate("/")}
+            >
               <div className="w-16 h-16 flex items-center justify-center">
                 <img
-                  src="https://i.ibb.co/C5gQPDNN/Screenshot-2025-11-23-at-11-12-50-AM.png"
+                  src="https://i.ibb.co/v6QVykr0/srir-removebg-preview.png"
                   alt="icon"
                   className="w-14 h-14 object-contain"
                 />
               </div>
-              <h1 className="text-xl md:text-2xl font-bold">
-                <span className="text-foreground">SRI </span>
-                <span className="text-brand-blue">RAGA PRANITHA</span>
+
+              <h1 className="text-xl md:text-2xl font-bold leading-tight">
+                <span className="text-brand-blue block">Sri Raga Pranitha</span>
+                {/* <span className="text-brand-blue block">RAGA PRANITHA</span> */}
               </h1>
             </div>
           </div>
@@ -77,10 +81,9 @@ const Header = () => {
               <li key={index} className="flex-shrink-0">
                 <button
                   onClick={() => navigate(item.href)}
-                  className="flex items-center gap-1 text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1 bg-transparent"
+                  className="flex items-center gap-1 text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap px-2 py-1"
                 >
                   {item.label}
-                  {/* {item.hasDropdown && <ChevronDown className="h-3 w-3" />} */}
                 </button>
               </li>
             ))}

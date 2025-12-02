@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Building2, Download, Users, Award, Star, Send } from 'lucide-react';
+import { Shield, Store, Package, Users, Award, Star, Send } from 'lucide-react';
 
 export default function Stats() {
   const [formData, setFormData] = useState({
@@ -16,28 +16,24 @@ export default function Stats() {
       label: 'Years of Trust'
     },
     {
-      icon: Building2,
-      value: '10+',
+      icon: Store,
+      value: '5+',
       label: 'Experience Stores'
     },
-    {
-      icon: Download,
-      value: '1K +',
-      label: 'Products'
-    },
+    // {
+    //   icon: Package,
+    //   value: '1K +',
+    //   label: 'Products'
+    // },
     {
       icon: Users,
       value: '30K+',
       label: 'Happy Customers'
     },
-    {
-      icon: Award,
-      value: '200+',
-      label: 'Certified Audiologists'
-    },
+   
     {
       icon: Star,
-      value: '15K',
+      value: '1K',
       label: 'Google Reviews'
     }
   ];
@@ -89,11 +85,11 @@ export default function Stats() {
             return (
               <div
                 key={index}
-                className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 md:p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-3 md:p-5 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <div className="flex flex-col items-center text-center">
-                  <Icon className="w-8 h-8 md:w-10 md:h-10 mb-3 md:mb-4 text-blue-400" />
-                  <h3 className="text-2xl md:text-3xl font-bold mb-1 md:mb-2">{stat.value}</h3>
+                  <Icon className="w-6 h-6 md:w-8 md:h-8 mb-2 md:mb-3 text-blue-400" />
+                  <h3 className="text-xl md:text-2xl font-bold mb-1">{stat.value}</h3>
                   <p className="text-xs md:text-sm text-slate-300 leading-tight">{stat.label}</p>
                 </div>
               </div>

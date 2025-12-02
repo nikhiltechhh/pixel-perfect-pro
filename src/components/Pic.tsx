@@ -18,11 +18,7 @@ export default function Pic() {
       title: 'Home',
       subtitle: 'Visit'
     },
-    {
-      icon: Store,
-      title: 'Experience',
-      subtitle: 'Stores'
-    },
+   
     {
       icon: Gift,
       title: 'Guaranteed',
@@ -30,7 +26,7 @@ export default function Pic() {
     },
     {
       icon: Ear,
-      title: 'Free Hearing',
+      title: 'Hearing',
       subtitle: 'Aid Trial'
     },
     {
@@ -38,11 +34,7 @@ export default function Pic() {
       title: 'Hearing Aid',
       subtitle: 'e-Store'
     },
-    {
-      icon: Wrench,
-      title: 'In-House',
-      subtitle: 'Service Lab'
-    }
+   
   ];
 
   return (
@@ -90,21 +82,65 @@ export default function Pic() {
             </div>
           </div>
 
-          {/* Right Section - Team Illustration */}
+      {/* Right Section - Product Gallery */}
           <div className="flex justify-center lg:justify-end">
-  <div className="relative w-full max-w-lg">
-    <img
-      src="https://i.ibb.co/Y7D6cnNg/ephone-removebg-preview.png"
-      alt="Team"
-      className="w-full h-auto object-contain"
-    />
-  </div>
-</div>
+            <div className="w-full max-w-lg">
+              <div className="grid grid-cols-2 gap-4  md:gap-6">
+                {[
+                  { 
+                    src: "https://i.ibb.co/39726gzX/Earphonee-removebg-preview.png",
+                    name: "RIC",
+                    alt: "Premium Earphones"
+                  },
+                  { 
+                    src: "https://i.ibb.co/jkzFKy3W/ear1-removebg-preview.png",
+                    name: "CIC",
+                    alt: "Behind-the-Ear Hearing Aid"
+                  },
+                  { 
+                    src: "https://i.ibb.co/Q3YG3RHS/Ear2-removebg-preview.png",
+                    name: "BTE",
+                    alt: "BTE"
+                  },
+                  { 
+                    src: "https://i.ibb.co/Z6jJzC8k/Ear3-removebg-preview.png",
+                    name: "ITC",
+                    alt: "In-Ear Hearing Device"
+                  }
+                  // { 
+                  //   src: "https://i.ibb.co/yctxFmV5/Ear4-removebg-preview.png",
+                  //   name: "CIC",
+                  //   alt: "Compact Hearing Aid"
+                  // },
+                   
+                ].map((product, idx) => (
+                  <div 
+                    key={idx}
+                    className="group"
+                  >
+                    <div className="  p-4 md:p-6  transition-all duration-300 hover:scale-105">
+                      <div className=" flex items-center justify-center overflow-hidden ">
+                        <img
+                          src={product.src}
+                          alt={product.alt}
+                          className="w-full h-full object-contain p-2 animate-float"
+                          style={{ animationDelay: `${idx * 0.2}s` }}
+                        />
+                      </div>
+                      <p className="mt-3 text-center text-sm md:text-base font-semibold text-blue-800 group-hover:text-blue-600 transition-colors">
+                        {product.name}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
 
-      <style >{`
+      {/* <style >{`
         @keyframes float {
           0%, 100% {
             transform: translateY(0px);
@@ -117,7 +153,7 @@ export default function Pic() {
         .animate-float {
           animation: float 3s ease-in-out infinite;
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }

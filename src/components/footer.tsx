@@ -15,7 +15,7 @@ export default function Footer() {
   const quickLinks = [
     { label: "Home", href: "/" },
     { label: "Hearing Aids", href: "/hearingaid" },
-    { label: "Hearing Health", href: "/Health" },
+    { label: "Hearing Assessments", href: "/Health" },
     { label: "Book Appointment", href: "/Appointment" },
     { label: "Products", href: "/Products" },
   ];
@@ -45,7 +45,7 @@ export default function Footer() {
                 Sri Raga Pranitha
               </h2>
               <p className="text-blue-200 leading-relaxed max-w-md">
-                India's leading hearing care provider, dedicated to bringing back
+                A Leading hearing care provider, dedicated to bringing back
                 the joy of hearing. We offer comprehensive hearing solutions with
                 certified audiologists and cutting-edge technology.
               </p>
@@ -59,14 +59,14 @@ export default function Footer() {
                   <p className="text-blue-100 group-hover:text-white transition-colors">
                     +91 88012 29982
                   </p>
-                  <p className="text-sm text-blue-300">Mon-Sat, 9AM - 7PM</p>
+                  <p className="text-sm text-blue-300">Mon-Sat, 9AM - 9PM</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 group cursor-pointer">
                 <Mail className="w-5 h-5 text-blue-300 mt-0.5 group-hover:text-blue-200 transition-colors" />
                 <p className="text-blue-100 group-hover:text-white transition-colors">
-                  sriragapranitha@gmail.com
+                  sriragapranithasphg@gmail.com
                 </p>
               </div>
 

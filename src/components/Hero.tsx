@@ -1,4 +1,4 @@
-import { Calendar, Headphones, Video } from "lucide-react";
+import { Calendar, Ear, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -9,21 +9,16 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import heroImage from "@/assets/hero-hearing-test.jpg";
-import rapidTestImg from "@/assets/rapid-test-card.jpg";
-import appointmentImg from "@/assets/appointment-card.jpg";
-import videoConsultImg from "@/assets/video-consultation-card.jpg";
-
 const Hero = () => {
   const quickActions = [
     {
-      icon: <Headphones className="h-6 w-6 md:h-8 md:w-8 text-brand-blue" />,
+      icon: <Ear className="h-6 w-6 md:h-8 md:w-8 text-brand-blue" />,
       title: "Rapid",
       subtitle: "Hearing Test",
       buttonText: "TRY NOW",
       bgColor: "bg-card-bg-peach",
       image: "https://i.ibb.co/Y7D6cnNg/ephone-removebg-preview.png",
-      link: "/appointment", // plain redirect
+      link: "/appointment",
     },
     {
       icon: <Calendar className="h-6 w-6 md:h-8 md:w-8 text-brand-blue" />,
@@ -51,21 +46,21 @@ const Hero = () => {
       subtitle: "With Accurate Results",
       description:
         "Professional hearing assessments using state-of-the-art technology for precise diagnosis",
-      image: "https://i.ibb.co/HThZxQYt/hear-removebg-preview.png",
+      image: "https://i.ibb.co/sphK9t5r/Adv.jpg",
     },
     {
       title: "Expert Audiologists",
       subtitle: "Personalized Care",
       description:
         "Experienced professionals dedicated to your hearing health and wellbeing",
-      image: "https://i.ibb.co/WNnpJcwZ/hero-hearing-test-removebg-preview.png",
+      image: "https://i.ibb.co/NdJQH2g4/Per.jpg",
     },
     {
       title: "Modern Technology",
       subtitle: "Latest Equipment",
       description:
         "Cutting-edge diagnostic tools for comprehensive hearing evaluations",
-      image: "https://i.ibb.co/HThZxQYt/hear-removebg-preview.png",
+      image: "https://i.ibb.co/9k14MbpN/Mod.jpg",
     },
   ];
 
@@ -77,14 +72,39 @@ const Hero = () => {
   return (
     <div className="w-full">
       {/* Quick Action Cards */}
-      <section className="container mx-auto px-4 py-4 md:py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+      <section className="container mx-auto px-4 py-2 md:py-4">
+        <div>
+  <p className=" sm:block text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700 mb-2">
+    Welcome to Sri Raga Pranitha Speech and Hearing Centre
+  </p>
+</div>
+
+        <div className="grid grid-cols-3 sm:grid-cols-3 gap-2 md:gap-4">
           {quickActions.map((action, index) => (
             <Card
               key={index}
-              className={`${action.bgColor} border-0 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden group h-full`}
+              className={`${action.bgColor} border-0 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden group h-full cursor-pointer`}
+              onClick={() => handleNavigate(action.link)}
             >
-              <div className="grid grid-cols-2 h-full">
+              {/* Mobile Layout - Icon and Text Side by Side */}
+              <div className="sm:hidden p-2 flex items-center gap-2 min-h-[60px]">
+                <div className="flex-shrink-0">
+                  <div className="h-5 w-5 flex items-center justify-center">
+                    {action.icon}
+                  </div>
+                </div>
+                <div className="flex flex-col text-left">
+                  <h3 className="text-[10px] font-bold text-brand-blue-dark leading-tight">
+                    {action.title}
+                  </h3>
+                  <h3 className="text-[10px] font-bold text-brand-blue-dark leading-tight">
+                    {action.subtitle}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Desktop Layout - Original Grid with Image */}
+              <div className="hidden sm:grid grid-cols-2 h-full">
                 {/* Text Section */}
                 <div className="p-4 md:p-6 flex flex-col justify-between h-full">
                   <div>
@@ -97,11 +117,10 @@ const Hero = () => {
                     </h3>
                   </div>
 
-                  {/* Button with plain navigation */}
+                  {/* Button - visible but not needed for click */}
                   <Button
-                    className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold shadow-md w-full md:w-auto"
+                    className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold shadow-md w-full md:w-auto pointer-events-none"
                     size="default"
-                    onClick={() => handleNavigate(action.link)}
                   >
                     {action.buttonText}
                   </Button>

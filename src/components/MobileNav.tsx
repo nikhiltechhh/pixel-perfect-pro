@@ -11,7 +11,7 @@ const MobileNav = () => {
   const navigationItems = [
     { label: "HOME", href: "/" },
     { label: "HEARING AIDS", href: "/hearingaid" },
-    { label: "HEARING HEALTH", href: "/Health" },
+    { label: "HEARING ASSESSMENTS", href: "/Health" },
     { label: "RAPID HEARING TEST", href: "/Appointment" },
     { label: "BOOK APPOINTMENT", href: "/Appointment" },
     { label: "PRODUCTS", href: "/Products" },
@@ -45,14 +45,14 @@ const MobileNav = () => {
           >
             <div className="w-10 h-10">
     <img
-      src="https://i.ibb.co/C5gQPDNN/Screenshot-2025-11-23-at-11-12-50-AM.png" // Placeholder image
+      src="https://i.ibb.co/v6QVykr0/srir-removebg-preview.png" // Placeholder image
       alt="Logo"
       className="w-full h-full object-contain"
     />
   </div>
             <span className="text-xl font-bold">
-              <span className="text-foreground">SRI </span>
-              <span className="text-brand-blue">RAGA PRANITHA</span>
+              <span className="text-foreground">Sri </span>
+              <span className="text-brand-blue">Raga Pranitha</span>
             </span>
           </SheetTitle>
         </SheetHeader>
